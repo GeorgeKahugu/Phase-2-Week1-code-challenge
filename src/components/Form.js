@@ -1,23 +1,48 @@
-import React from "react";
+import {useState} from "react";
 
-const Form=()=>{
+const Form=({includeTransaction})=>{
+    const [date,setDate]=useState('');
+    const[description,setDescription]=useState('');
+    const[category,setCategory]=useState('');
+    const[amount,setAmount]=useState('');
+
+const handleSubmit=(e) => {
+    e. preventDefault();
+    const newTransaction={
+        id:Date.now(),
+        date,
+        amount: parseFloat(amount),
+        description,
+        category,
+    };
+    includeTransaction(newTransaction);
+    setDate('');
+    setDescription('');
+    setCategory('')
+    setAmount('')
+
+};
+
+
     return(
         <div>
-            <form>
+            <form includeTransaction={handleSubmit}>
                 <label>Date</label>
-                <input type="date"/>
+                <input type="date" value={date} onChange={(e) => setDate(e.target.value)}/>
 
                 
-                <input type="text" placeholder="Description"/>
+                <input type="text" placeholder="Description" value={description} onChange={(e)=> setDescription(e.target.value)}/>
 
-                <input type="text" placeholder="Category"/>
+                <input type="text" placeholder="Category" value={category} onChange={(e)=> setCategory(e.target.value)}/>
 
-                <input type="number" placeholder="Amount"/>
+                <input type="number" placeholder="Amount" value={category} onChange={(e) => setAmount(e.target.value)}/>
 
                 <button type="submit">Add Transaction </button>
             </form>
         </div>
     )
+
 };
+
 
 export default Form
