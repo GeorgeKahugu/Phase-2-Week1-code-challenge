@@ -3,7 +3,8 @@ import React from 'react'
 import ListofTransactions from './components/ListofTransactions';
 import Form from './components/Form'
 import Search from "./components/Search";
-let fetchedTransactions=[
+import DisplayRoyalBankofFlatiron from "./components/RoyalBankofFlatiron";
+ const fetchedTransactions=[
   {date: "2019-12-01", description:"Paycheck from Bob's Burgers", category:"Income", amount: 1000, },
   {date: "2019-12-01", description:"South by Southwest Quinoa Bowl at Fresh & Co", category:"Food", amount: -10.55, },
   {date: "2019-12-02", description:"South by Southwest Quinoa Bowl at Fresh & Co", category:"Food", amount: -10.55, },
@@ -14,6 +15,7 @@ let fetchedTransactions=[
 function App() {
   return(
     <div>
+    <DisplayRoyalBankofFlatiron/>
       <Search/>
       <Form/>
       <ListofTransactions transactions={fetchedTransactions}/>
