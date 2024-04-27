@@ -15,7 +15,10 @@ const ListofTransactions=({transactions}) => {
                 <tbody>
                     {transactions.map((transaction,index)=>(
                         <tr key={index}>
-                            <td></td>
+                            <td>{transaction.date}</td>
+                            <td>{transaction.description}</td>
+                            <td>{transaction.category}</td>
+                            <td>{transaction.amount}</td>
                         </tr>
                     ))}
                 </tbody>
@@ -23,3 +26,4 @@ const ListofTransactions=({transactions}) => {
         </div>
     )
 }
+export default ListofTransactions;
