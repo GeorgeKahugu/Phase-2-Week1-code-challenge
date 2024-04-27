@@ -14,6 +14,9 @@ function App() {
   {date: "2019-12-06", description:"Venmo, Alice Pays you for Burrito", category:"Food", amount: 8.75, },
   {date: "2019-12-06", description:"Chipotle", category:"Food", amount: -17.59 },
   ])
+
+  const addTransaction=(newTransaction)=>{setTransaction([...transactions,newTransaction])}
+
   return(
     <div>
     <DisplayRoyalBankofFlatiron/>

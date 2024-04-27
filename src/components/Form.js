@@ -9,7 +9,6 @@ const Form=({includeTransaction})=>{
 const handleSubmit=(e) => {
     e. preventDefault();
     const newTransaction={
-        id:Date.now(),
         date,
         amount: parseFloat(amount),
         description,
@@ -26,7 +25,7 @@ const handleSubmit=(e) => {
 
     return(
         <div>
-            <form includeTransaction={handleSubmit}>
+            <form onSubmit={handleSubmit}>
                 <label>Date</label>
                 <input type="date" value={date} onChange={(e) => setDate(e.target.value)}/>
 
@@ -35,7 +34,7 @@ const handleSubmit=(e) => {
 
                 <input type="text" placeholder="Category" value={category} onChange={(e)=> setCategory(e.target.value)}/>
 
-                <input type="number" placeholder="Amount" value={category} onChange={(e) => setAmount(e.target.value)}/>
+                <input type="number" placeholder="Amount" value={amount} onChange={(e) => setAmount(e.target.value)}/>
 
                 <button type="submit">Add Transaction </button>
             </form>
