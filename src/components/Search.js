@@ -1,10 +1,16 @@
-import React from "react";
+import React, {useState} from "react";
 
 
-const Search=()=>{
+const Search=({setSearch})=>{
+    const[searchName,setSearchName]=useState("");
+
+    const handleChange=(e)=>{
+        setSearchName(e.target.value);
+        setSearch(e.target.value)
+    }
     return(
-        <div>
-            <input type="text" placeholder="Search for your Recent Transaction"/>
+        <div className="search">
+             <input className="searchbar" type="text" placeholder="Search for your Recent Transaction" value={searchName} onChange={handleChange} />
         </div>
     );
 };

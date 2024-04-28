@@ -15,12 +15,22 @@ function App() {
   {date: "2019-12-06", description:"Chipotle", category:"Food", amount: -17.59 },
   ])
 
-  const addTransaction=(newTransaction)=>{setTransaction([...transactions,newTransaction])}
+  const addTransaction = (newTransaction) => {
+    setTransaction([...transactions, newTransaction]);
+  };
+
+  const manageSearch = (searchName) => {
+    const searchFilter = transactions.filter((transaction) =>
+      transaction.description.toLowerCase().includes(searchName.toLowerCase())
+    );
+    setTransaction(searchFilter);
+  };
+
 
   return(
     <div>
     <DisplayRoyalBankofFlatiron/>
-      <Search/>
+    <Search setSearch={manageSearch} />
       <Form includeTransaction={addTransaction} />
       <ListofTransactions transactions={transactions}/>
     </div>
