@@ -1,8 +1,9 @@
+// Imports 
 import "./App.css";
 import React, { useState } from 'react'
-import ListofTransactions from './components/ListofTransactions';
-import Form from './components/Form'
-import Search from "./components/Search";
+import TableListofTransactions from './components/TableListofTransactions';
+import FormofTransactions from './components/FormofTransactions'
+import SearchofTransactions from "./components/SearchofTransactions";
 import DisplayRoyalBankofFlatiron from "./components/RoyalBankofFlatiron";
  
 function App() {
@@ -15,10 +16,12 @@ function App() {
   {date: "2019-12-06", description:"Chipotle", category:"Food", amount: -17.59 },
   ])
 
+// Add Transaction
   const addTransaction = (newTransaction) => {
     setTransaction([...transactions, newTransaction]);
   };
 
+// Search 
   const manageSearch = (searchName) => {
     const searchFilter = transactions.filter((transaction) =>
       transaction.description.toLowerCase().includes(searchName.toLowerCase())
@@ -26,13 +29,13 @@ function App() {
     setTransaction(searchFilter);
   };
 
-
+// Display each of the Components added
   return(
     <div>
     <DisplayRoyalBankofFlatiron/>
-    <Search setSearch={manageSearch} />
-      <Form includeTransaction={addTransaction} />
-      <ListofTransactions transactions={transactions}/>
+    <SearchofTransactions setSearch={manageSearch} />
+      <FormofTransactions includeTransaction={addTransaction} />
+      <TableListofTransactions transactions={transactions}/>
     </div>
   )
   

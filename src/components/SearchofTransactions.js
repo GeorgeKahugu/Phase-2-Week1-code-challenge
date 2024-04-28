@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 
 
-const Search=({setSearch})=>{
+const SearchofTransactions=({setSearch})=>{
     const[searchName,setSearchName]=useState("");
 
     const handleChange=(e)=>{
@@ -15,4 +15,4 @@ const Search=({setSearch})=>{
     );
 };
 
-export default Search;
+export default SearchofTransactions;

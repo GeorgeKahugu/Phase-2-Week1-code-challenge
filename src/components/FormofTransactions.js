@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Form = ({ includeTransaction }) => {
+const FormofTransactions = ({ includeTransaction }) => {
   const [date, setDate] = useState("");
   const [description, setDescription] = useState("");
   const [category, setCategory] = useState("");
@@ -35,7 +35,6 @@ const Form = ({ includeTransaction }) => {
         </div>
 
         <div>
-          {" "}
           <input
             type="text"
             placeholder="Description"
@@ -70,4 +69,4 @@ const Form = ({ includeTransaction }) => {
   );
 };
 
-export default Form;
+export default FormofTransactions;

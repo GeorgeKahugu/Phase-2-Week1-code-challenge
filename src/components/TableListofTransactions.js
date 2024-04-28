@@ -1,6 +1,6 @@
 import React from "react";
 
-const ListofTransactions=({transactions}) => {
+const TableListofTransactions=({transactions}) => {
     return (
         <div>
             <table>
@@ -26,4 +26,4 @@ const ListofTransactions=({transactions}) => {
         </div>
     )
 }
-export default ListofTransactions;
+export default TableListofTransactions;
