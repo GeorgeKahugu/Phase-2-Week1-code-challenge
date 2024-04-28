@@ -1,17 +1,21 @@
 .App {
   text-align: center;
 }
+
+/* designing the table */
 table{
-  width:100%
-  border-collapse; 
+  width:100%;
+  border-collapse:collapse; 
   margin-bottom: 20px; 
 }
+
 
 td {
   border: 1px solid #ddd; 
   padding: 8px; 
   text-align: center; 
 }
+
 
 th {
   background-color: #f2f2f2;
@@ -32,8 +36,9 @@ th {
   }
 }
 
+/* div classname of header */
 .header {
-  background-color: rgb(55, 0, 128);
+  background-color: #370080;
   min-height: 1vh;
   display: flex;
   flex-direction: column;
@@ -56,21 +61,27 @@ th {
     transform: rotate(360deg);
   }
 }
-
+/* div classname of Form */
 .form{
-  display: flex;
+  display: flex; 
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  border: 2px solid grey;
+  margin:5px;
+  margin-bottom: 20px;
+  padding:10px
+  
 }
-
+/* div classname of Form-input */
 .form-input{
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
-
+/* div classname of button */
 .button{
   display: flex;
   flex-direction: row;
@@ -78,18 +89,20 @@ th {
   justify-content: center;
 }
 
+/* div classname of search */
 .search{
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width:100%;
+  width:200%;
   
 }
 
+/* div classname of search */
 .searchbar{
-  width:100%;
-  height:30px;
-  margin: 75px;
+  width:580%;
+  height:20px;
+  margin: 20px;
 }
 

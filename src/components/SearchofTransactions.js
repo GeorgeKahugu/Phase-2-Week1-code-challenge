@@ -1,6 +1,7 @@
+// Imports
 import React, {useState} from "react";
 
-
+// Making the search function
 const SearchofTransactions=({setSearch})=>{
     const[searchName,setSearchName]=useState("");
 

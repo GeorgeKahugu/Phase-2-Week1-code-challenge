@@ -1,11 +1,14 @@
+// import useState
 import { useState } from "react";
 
+// Form
 const FormofTransactions = ({ includeTransaction }) => {
   const [date, setDate] = useState("");
   const [description, setDescription] = useState("");
   const [category, setCategory] = useState("");
   const [amount, setAmount] = useState("");
 
+// handleSubmit
   const handleSubmit = (e) => {
     e.preventDefault();
     const newTransaction = {
@@ -33,7 +36,7 @@ const FormofTransactions = ({ includeTransaction }) => {
             onChange={(e) => setDate(e.target.value)}
           />
         </div>
-
+{/* Form input of Description */}
         <div>
           <input
             type="text"
@@ -43,6 +46,7 @@ const FormofTransactions = ({ includeTransaction }) => {
           />
         </div>
 
+{/* Form input of Category */}
         <div>
           <input
             type="text"
@@ -52,6 +56,7 @@ const FormofTransactions = ({ includeTransaction }) => {
           />
         </div>
 
+{/* Form of Amount  */}
         <div>
           <input
             type="number"

@@ -1,8 +1,11 @@
+//Imports
 import React from "react";
+import '../App.css'
 
+// Use of props on FormofTransactions 
 const TableListofTransactions=({transactions}) => {
     return (
-        <div>
+        <div className="table">
             <table>
                 <thead>
                     <tr>
