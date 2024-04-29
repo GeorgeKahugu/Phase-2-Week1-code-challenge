@@ -5,7 +5,7 @@ import '../App.css'
 // Use of props on FormofTransactions 
 const TableListofTransactions=({transactions}) => {
     return (
-        <div className="table">
+        <div className="align">
             <table>
                 <thead>
                     <tr>

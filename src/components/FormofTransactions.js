@@ -28,18 +28,20 @@ const FormofTransactions = ({ includeTransaction }) => {
     <div className="form">
       <form onSubmit={handleSubmit}>
         <div className="form-input">
-        <label>Date</label>
+        <label>Date:</label>
         <div>
           <input
             type="date"
+            className="edit"
             value={date}
             onChange={(e) => setDate(e.target.value)}
           />
         </div>
 {/* Form input of Description */}
-        <div>
+        <div >
           <input
             type="text"
+            className="edit"
             placeholder="Description"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
@@ -50,6 +52,7 @@ const FormofTransactions = ({ includeTransaction }) => {
         <div>
           <input
             type="text"
+            className="edit"
             placeholder="Category"
             value={category}
             onChange={(e) => setCategory(e.target.value)}
@@ -60,6 +63,7 @@ const FormofTransactions = ({ includeTransaction }) => {
         <div>
           <input
             type="number"
+            className="edit"
             placeholder="Amount"
             value={amount}
             onChange={(e) => setAmount(e.target.value)}

@@ -64,13 +64,15 @@ th {
 /* div classname of Form */
 .form{
   display: flex; 
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   border: 2px solid grey;
   margin:5px;
-  margin-bottom: 20px;
-  padding:10px
+  margin-bottom: 10px;
+  padding:10px;
+ 
+  
   
 }
 /* div classname of Form-input */
@@ -78,8 +80,9 @@ th {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  gap: 20px;
+
+
 }
 /* div classname of button */
 .button{
@@ -87,6 +90,8 @@ th {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  padding: 10px;
+  
 }
 
 /* div classname of search */
@@ -106,3 +111,9 @@ th {
   margin: 20px;
 }
 
+
+.edit{
+ text-align: center;
+ width: 315px;
+
+}
